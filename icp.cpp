@@ -1,4 +1,4 @@
-// g++ icp.cpp -I /usr/include/eigen3/ -o icp
+// g++ icp.cpp -I /usr/include/eigen3/ -o icp.o
 // ./icp source.ply target.ply
 #include <stdio.h>
 #include <iostream>

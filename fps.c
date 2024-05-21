@@ -1,3 +1,6 @@
+// gcc fps.c -lm -o fps.o
+// ./fps.o source.ply
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
