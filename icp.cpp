@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <math.h>
 #include <float.h>
 #include <Eigen/Dense>
@@ -186,7 +187,11 @@ int main(int argc, char *argv[]) {
     Matrix3d R = Matrix3d::Identity();
     Vector3d t = Vector3d::Zero();
 
+    clock_t start = clock();
     icp(source_points, target_points, num_source_points, R, t);
+    clock_t end = clock();
+    double time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+    printf("ICP completed in %.2f seconds\n", time_taken);
 
     printf("Rotation matrix:\n");
     std::cout << R << std::endl;
